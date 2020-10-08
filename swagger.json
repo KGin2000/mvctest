@@ -1,0 +1,62 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "description": "ระบบนี้้แม่งห่วย",
+      "version": "1",
+      "title": "calculator basic"
+    },
+    "host": "localhost:3000",
+    "tags": [
+      {
+        "name": "บวก"
+      },
+      {
+        "name": "ระบบเช็คจำนวนคน"
+      }
+    ],
+    "schemes": [
+      "http"
+    ],
+    "paths": {
+      "/add": {
+        "post": {
+          "tags": [
+            "บวก"
+          ],
+          "summary": "บวก",
+          "consumes": [
+            "application/x-www-form-urlencoded"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "x",
+              "in": "formData",
+              "description": "ใส่ค่าx",
+              "required": true,
+              "type": "integer",
+              "default": "30"
+            },
+            {
+              "name": "y",
+              "in": "formData",
+              "description": "ใส่ค่าy",
+              "required": true,
+              "type": "string",
+              "default": "30"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Ans",
+              "schema": {
+                "example": 60
+              }
+            }
+          }
+        }
+      }
+    }
+  }
